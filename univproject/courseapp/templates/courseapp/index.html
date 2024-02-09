@@ -1,0 +1,31 @@
+<!-- [Example 2]
+
+<h1> Software Engineering Courses </h1>
+
+{% if courses %}
+    <ul>
+    {% for course in courses %}
+        <li>{{ course.title }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No course yet.</p>
+{% endif %}
+ -->
+
+
+
+<!-- [Example 3]-->
+
+<h1> Software Engineering Courses </h1>
+
+{% if courses %}
+	<ul> 
+	{% for course in courses %}
+		<li><a href="{% url 'course' course.id %}">{{ course.title }}</a></li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p> No course yet.</p>
+{% endif %}
+

@@ -1,0 +1,61 @@
+
+<!-- [Example 3]
+
+<ul> 
+	<li>Title: {{ course.title }}</li>
+	<li>Department: {{ course.dept }}</li>
+</ul>
+
+-->
+
+
+<!-- [Example 6: Error Message]
+
+{% if messages %}
+<ul>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<ul>
+  <li>Title: {{ course.title }}</li>
+  <li>Dept: {{ course.dept }}</li>
+</ul>
+
+
+-->
+
+
+<!--  [Example 7: Web Form and HTTP Post]
+
+<form action="{% url 'course' course.id %}" method="post">
+  {% csrf_token %}
+  <label for="title">Title:</label>
+  <input type="text" id="title" name="title" value="{{course.title}}">
+  <br>
+  <label for="dept">Department:</label>
+  <select id="dept" name="dept" required>
+    <option value="">--</option>
+    {% for dept in depts %}
+    <option value="{{dept.id}}" {% if dept.id == course.id %} selected {% endif%}>
+      {{dept.name}}
+    </option>
+    {% endfor %}
+  </select>
+  <br>
+  <input type="submit" value="New course">
+</form>
+
+-->
+
+
+<!--  [Example 8: Web Form in Django] -->
+<form action="{% url 'course' course.id %}" method="post">
+{% csrf_token %}
+{{ form }}
+<input type="submit" value="New course">
+</form>
+
+
