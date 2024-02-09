@@ -17,3 +17,7 @@ The source code of the project include the code that we had during the following
 - Development of Web Applications
 - Test-Driven Development.
 - GitHub Guidelines
+
+For The Secret Key:
+In a Django project, the SECRET_KEY is a crucial setting used for cryptographic functions, such as creating secure session cookies and hashing passwords. It is important to keep the SECRET_KEY confidential and not share it publicly or expose it in your code repository.
+To generates a random SECRET_KEY in your project settings.py file, please, follow the instructions "Steps To Get Your Secret Key" on CANVAS. Remember that the SECRET_KEY is a critical part of your application's security, and its confidentiality is vital for the overall security of your Django project. 
